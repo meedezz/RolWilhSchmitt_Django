@@ -1,0 +1,100 @@
+﻿{% extends "app/layout.html" %}
+
+{% block css %}
+<style type="text/css">
+
+.fullscreen{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+
+    background: white;
+}
+
+.fullscreen img{
+    position: absolute;
+    top: 200px;
+    transform: translateX(-50%);
+    left: 50%;
+    height: 400px;
+}
+
+.fullscreen a{
+    position: absolute;
+    top: 40px;
+    right: 80px;
+    color: black;
+    font-size: 80px;
+    text-decoration: none;
+}
+
+.caption{
+    position: absolute;
+    top: 620px;
+    transform: translateX(-50%);
+    left: 50%;
+    font-size: 24px;
+}
+
+.date{
+    position: absolute;
+    top: 660px;
+    transform: translateX(-50%);
+    left: 50%;
+    font-size: 16px;
+}
+
+</style>
+{% endblock %}
+
+{% block menu %}
+<div class="fullscreen">
+    <a href="javascript: showMenu();"><i class="fa  fa-close"></i></a>
+    <img src="" />
+    <p class="caption"></p>
+    <p class="date"></p>
+</div>
+{% endblock %}
+
+{% block content %}
+<ul class="portfolio-grid">   
+     
+    {% for b in db %}
+
+    <li class="grid-item" data-jkit="[show:delay=3000;speed=500;animation=fade]">
+        <img src="{{ b.img }}">
+        <a class="ajax-link" href="javascript: showMenu('{{b.img}}', '{{b.caption}}', '{{b.date}}'); ">  
+            <div class="grid-hover">
+                <h1></h1>
+            </div>
+        </a>  
+    </li>
+
+    {% endfor %}
+
+
+</ul>
+
+{% endblock %}
+
+
+{% block js %}
+<script type="text/javascript">
+
+    $('.fullscreen').fadeToggle("slow", "linear");
+
+    function showMenu() {
+        $('.fullscreen').fadeToggle("slow", "linear");
+    }
+
+    function showMenu(url, cap, dt) {
+        $('.fullscreen img').attr("src", url);
+        $('.caption').text(cap);
+        $('.date').text(dt);
+        $('.fullscreen').fadeToggle("slow", "linear");
+    }
+
+</script>
+{% endblock %}

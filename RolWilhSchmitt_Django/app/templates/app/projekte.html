@@ -1,0 +1,26 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+<ul class="portfolio-grid">   
+     
+    {% for b in db %}
+
+    <li class="grid-item" data-jkit="[show:delay=3000;speed=500;animation=fade]">
+        <img src="{{ b.img }}">
+        <a class="ajax-link" href="/projekt/?p={{b.id}}">  
+            <div class="grid-hover">
+                <h1>{{b.name}}</h1>
+            </div>
+        </a>  
+    </li>
+
+    {% endfor %}
+
+
+</ul>
+
+{% endblock %}
+
+
+{% block js %}
+{% endblock %}

@@ -1,0 +1,204 @@
+﻿<!doctype html>
+
+<html lang="de">
+<head>
+
+  <meta charset="utf-8">
+  <title>rol. wilh. schmitt</title>
+  <meta name="description" content="Roland Wilhelm Schmitt - Freischaffender Künstler in Sigmaringen">
+  <meta name="keywords" content="roland, wilhelm, schmitt, freischaffend, freischaffender, künstler, freischaffender künstler, kunst, art, sigmaringen, sig">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="Pascal Michler">
+  <link rel="icon" type="image/png" href="../../static/app/img/icon.png" />
+
+<!--Style-->
+
+  <link rel="stylesheet" href="../../static/app/content/reset.css">
+  <link rel="stylesheet" href="../../static/app/content/style.css">
+  <link rel="stylesheet" href="../../static/app/content/style-responsive.css">  
+  
+  <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="../../static/app/content/font-awesome.css">
+
+    {% block css %}{% endblock %}
+  
+</head>
+
+<body>
+
+<!--Preloader-->
+
+<div class="preloader" id="preloader">
+    <div class="item">
+      <div class="spinner">
+      </div>
+    </div>
+</div>
+
+{% block menu %}
+
+{% endblock %}
+
+<div class="opacity-nav">
+
+        <div class="menu-index" id="buttons" style="z-index:999999">
+        <i class="fa  fa-close"></i>
+        </div>
+<div style="margin-bottom: 164px;"></div>
+    
+    <ul class="portfolio-grid tiles">
+        
+    </ul>
+    
+    <ul class="portfolio-grid tiles" style="margin-top: -80px;"> 
+        <li class="grid-item-nav" data-jkit="[show:delay=3000;speed=500;animation=fade]">
+            <img src="http://placehold.it/100x100">                  
+            <h1>rol.<br>wilh.<br>schmitt</h1>
+            <a class="ajax-link" href="{% url 'home' %}">  
+                <div class="grid-hover-nav"></div>
+            </a>  
+        </li> 
+    </ul>
+    
+    <ul class="portfolio-grid tiles"> 
+        <li class="grid-item-nav" data-jkit="[show:delay=3000;speed=500;animation=fade]">
+            <img src="http://placehold.it/100x100">                  
+            <h1>atelier</h1>
+            <a class="ajax-link" href="{% url 'atelier' %}">  
+                <div class="grid-hover-nav"></div>
+            </a>  
+        </li> 
+        
+        <li class="grid-item-nav" data-jkit="[show:delay=3000;speed=500;animation=fade]">
+            <img src="http://placehold.it/100x100">                  
+            <h1>galerie 16.1</h1>
+            <a class="ajax-link" href="{% url 'galerie' %}">  
+                <div class="grid-hover-nav"></div>
+            </a>  
+        </li> 
+    </ul>
+    
+    <ul class="portfolio-grid tiles"> 
+        <li class="grid-item-nav" data-jkit="[show:delay=3000;speed=500;animation=fade]">
+            <img src="http://placehold.it/100x100">                  
+            <h1>vita</h1>
+            <a class="ajax-link" href="{% url 'vita' %}">  
+                <div class="grid-hover-nav"></div>
+            </a>  
+        </li> 
+        
+        <li class="grid-item-nav" data-jkit="[show:delay=3000;speed=500;animation=fade]">
+            <img src="http://placehold.it/100x100">                  
+            <h1>kontakt</h1>
+            <a class="ajax-link" href="{% url 'kontakt' %}">  
+                <div class="grid-hover-nav"></div>
+            </a>  
+        </li> 
+        <li class="grid-item-nav" data-jkit="[show:delay=3000;speed=500;animation=fade]">
+            <img src="http://placehold.it/100x100">                  
+            <h1>anfahrt</h1>
+            <a class="ajax-link" href="{% url 'anfahrt' %}">  
+                <div class="grid-hover-nav"></div>
+            </a>  
+        </li> 
+    </ul>
+    
+    <ul class="portfolio-grid tiles"> 
+        <li class="grid-item-nav" data-jkit="[show:delay=3000;speed=500;animation=fade]">
+            <img src="http://placehold.it/100x100">                  
+            <h1>bilder</h1>
+            <a class="ajax-link" href="{% url 'bilder' %}">  
+                <div class="grid-hover-nav"></div>
+            </a>  
+        </li> 
+        
+        <li class="grid-item-nav" data-jkit="[show:delay=3000;speed=500;animation=fade]">
+            <img src="http://placehold.it/100x100">                  
+            <h1>bücher</h1>
+            <a class="ajax-link" href="{% url 'buecher' %}">  
+                <div class="grid-hover-nav"></div>
+            </a>  
+        </li> 
+        <li class="grid-item-nav" data-jkit="[show:delay=3000;speed=500;animation=fade]">
+            <img src="http://placehold.it/100x100">                  
+            <h1>objekte</h1>
+            <a class="ajax-link" href="{% url 'objekte' %}">  
+                <div class="grid-hover-nav"></div>
+            </a>  
+        </li> 
+        <li class="grid-item-nav" data-jkit="[show:delay=3000;speed=500;animation=fade]">
+            <img src="http://placehold.it/100x100">                  
+            <h1>projekte</h1>
+            <a class="ajax-link" href="{% url 'projekte' %}">  
+                <div class="grid-hover-nav"></div>
+            </a>  
+        </li> 
+    </ul>
+
+</div>
+
+
+  <!--Header-->
+  <header id="fullscreen">
+    
+      <div class="logo" id="full"><a class="ajax-link" href="{% url 'home' %}" style="z-index: 9999">rol. wilh. schmitt</a></div>
+      
+        <div class="menu-index" id="button">
+            <i class="fa fa-bars"></i>
+        </div>
+        
+  </header>
+
+  <div class="clear"></div>
+
+  <!--Content-->
+
+  <div class="content" id="ajax-content">
+
+
+        <div class="text-intro">
+
+          <h1>{{ title }}</h1>
+
+        </div>
+
+        {% block content %}{% endblock %}
+
+  </div>
+
+
+
+  <!--Home Sidebar-->
+
+<div id="ajax-sidebar"></div>
+
+
+<!--Scripts-->
+
+  <script src="../../static/app/scripts/jquery.min.js"></script>
+	<script src="../../static/app/scripts/jquery.easing.min.js"></script>
+	<script src="../../static/app/scripts/modernizr.custom.42534.js" type="text/javascript"></script>
+  <script src="../../static/app/scripts/jquery.waitforimages.js" type="text/javascript"></script>
+  <script src="../../static/app/scripts/typed.js" type="text/javascript"></script>
+  <script src="../../static/app/scripts/masonry.pkgd.min.js" type="text/javascript"></script>  
+  <script src="../../static/app/scripts/imagesloaded.pkgd.min.js" type="text/javascript"></script>    
+  <script src="../../static/app/scripts/jquery.jkit.1.2.16.min.js"></script>
+ 
+  <script src="../../static/app/scripts/script.js" type="text/javascript"></script>
+  
+	<script>
+    $('#button, #buttons').on('click', function() {
+      $( ".opacity-nav" ).fadeToggle( "slow", "linear" );
+    // Animation complete.
+        h = $(".grid-item-nav").height()+10;
+        $(".tiles").css("height", h+"px");
+    });
+  </script>
+
+   {% block js %}
+
+    {% endblock %}
+
+
+</body>
+</html>
